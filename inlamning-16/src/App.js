@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Formular from './form.js';
+import Button from './button.js';
+
 
 class App extends Component {
     constructor(props) {
@@ -27,6 +29,7 @@ class App extends Component {
                   sparaInputmail={this.sparaInputmail}
                   namn={this.state.namn}
                   email={this.state.email} />
+        <Button />
       </div>
     );
   }

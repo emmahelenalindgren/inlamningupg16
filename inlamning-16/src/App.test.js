@@ -4,6 +4,7 @@ import App from './App';
 import { shallow } from "enzyme";
 import { mount } from "enzyme";
 import Formular from "./form";
+import Button from "./button";
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -22,8 +23,10 @@ test("testar input-email", () => {
 
 
 test("testar button-element", () => {
-   let wrapper = shallow(<Formular/>);
-    let actual = wrapper.find(<button />).hasClass("buttonClass");
+   let wrapper = shallow(<Button />);
+    let actual = wrapper.find("button").hasClass("buttonClass");
+    let expected = true;
+    expect(actual).toBe(expected);
 });
 
 
