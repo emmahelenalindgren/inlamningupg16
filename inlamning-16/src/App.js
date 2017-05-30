@@ -4,6 +4,15 @@ import './App.css';
 import Formular from './form.js';
 
 class App extends Component {
+    constructor(props) {
+     super(props);
+        this.state= {
+            namn: "",
+            email: ""
+        }
+        this.sparaInputnamn = this.sparaInputnamn.bind(this);
+        this.sparaInputmail = this.sparaInputmail.bind(this);
+    }
   render() {
     return (
       <div className="App">
@@ -14,10 +23,29 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Formular />
+        <Formular sparaInputnamn={this.sparaInputnamn}
+                  sparaInputmail={this.sparaInputmail}
+                  namn={this.state.namn}
+                  email={this.state.email} />
       </div>
     );
   }
+    sparaInputnamn (event){
+        let name = event.target.value;
+        this.setState ({
+            namn: name
+        });
+    }
+        
+    sparaInputmail(event){
+        let mail = event.target.value;
+        this.setState ({
+            email: mail
+        });
+    }
 }
+
+
+
 
 export default App;

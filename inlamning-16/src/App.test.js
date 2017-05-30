@@ -19,3 +19,9 @@ test("testar input-email", () => {
    let wrapper = mount(<Formular/>);
     wrapper.find({className: "inputMail"})
 });
+
+
+
+
+
+
