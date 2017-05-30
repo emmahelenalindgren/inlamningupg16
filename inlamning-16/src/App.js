@@ -14,6 +14,7 @@ class App extends Component {
         }
         this.sparaInputnamn = this.sparaInputnamn.bind(this);
         this.sparaInputmail = this.sparaInputmail.bind(this);
+        this.clearButton = this.clearButton.bind(this);
     }
   render() {
     return (
@@ -29,7 +30,7 @@ class App extends Component {
                   sparaInputmail={this.sparaInputmail}
                   namn={this.state.namn}
                   email={this.state.email} />
-        <Button />
+        <Button clearButton={this.clearButton} />
       </div>
     );
   }
@@ -45,6 +46,13 @@ class App extends Component {
         this.setState ({
             email: mail
         });
+    }
+    
+    clearButton (){
+         this.setState ({
+            namn: "",
+            email: ""
+        });  
     }
 }
 
