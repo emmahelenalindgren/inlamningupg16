@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow } from "enzyme";
+import { mount } from "enzyme";
+import Formular from "./form";
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -9,11 +11,11 @@ it('renders without crashing', () => {
 });
 
 test("testar input-name", () => {
-   let wrapper = mount(<Form/>);
+   let wrapper = mount(<Formular/>);
     wrapper.find({className: "inputNamn"})
 });
 
 test("testar input-email", () => {
-   let wrapper = mount(<Form/>);
+   let wrapper = mount(<Formular/>);
     wrapper.find({className: "inputMail"})
 });
