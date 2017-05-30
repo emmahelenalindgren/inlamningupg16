@@ -21,6 +21,12 @@ test("testar input-email", () => {
 });
 
 
+test("testar button-element", () => {
+   let wrapper = shallow(<Formular/>);
+    let actual = wrapper.find(<button />).hasClass("buttonClass");
+});
+
+
 
 
 
